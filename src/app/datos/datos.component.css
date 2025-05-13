@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Aplica la fuente Poppins en toda la tabla */
+.data-table, .data-table * {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tabla general */
+.data-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Encabezados */
+.data-table thead {
+  background-color: #f7c600; /* amarillo */
+  color: #000; /* negro */
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Última fila sin borde */
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Botones */
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botón editar */
+.edit-btn {
+  background-color: #6c757d; /* gris */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Botón eliminar */
+.delete-btn {
+  background-color: #dc3545; /* rojo */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

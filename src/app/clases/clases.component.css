@@ -1,0 +1,129 @@
+/* Fuente global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Estilo general */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sección Nuestras Clases */
+.tipos-clases {
+  padding: 2rem 0;
+}
+
+.tipos-clases h2 {
+  font-weight: 700;
+  color: #000;
+}
+
+.tipos-clases p {
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.tipos-clases .card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ffc107; /* Agregado borde amarillo a las tarjetas */
+}
+
+.tipos-clases .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tipos-clases .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tipos-clases .card-body {
+  padding: 1.5rem;
+  background-color: #fff8e1; /* Fondo amarillo suave dentro de las tarjetas */
+}
+
+.tipos-clases .card-title {
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.tipos-clases .card-text {
+  color: #333;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Sección Video */
+.video-container {
+  padding: 2rem 0;
+  background-color: #fff8e1; /* Fondo amarillo suave */
+  border-radius: 10px;
+}
+
+.video-container h3 {
+  font-weight: 600;
+  color: #000;
+}
+
+.video-container p {
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Sección Horarios */
+.horarios {
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+}
+
+.horarios h2 {
+  font-weight: 700;
+  color: #000;
+}
+
+.horarios p {
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.horarios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.horarios th, .horarios td {
+  padding: 1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.horarios th {
+  background-color: #ffc107;
+  color: #fff;
+  font-weight: 600;
+}
+
+.horarios tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.horarios tbody tr:hover {
+  background-color: #e2e2e2;
+}

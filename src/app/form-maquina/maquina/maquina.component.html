@@ -1,0 +1,70 @@
+<mat-card class="form-card">
+  <h2>Encuesta: Máquina más utilizada</h2>
+  <form #maquinaForm="ngForm" (ngSubmit)="onSubmit(maquinaForm)">
+    
+    <!-- Nombre -->
+    <mat-form-field appearance="outline">
+      <mat-label>Tu nombre</mat-label>
+      <input matInput name="nombre" [(ngModel)]="datos.nombre" required minlength="3">
+      @if (maquinaForm.controls['nombre']?.errors) {
+        <mat-error>
+          {{ maquinaForm.controls['nombre']?.errors?.['required'] ? 'Campo requerido' : 'Mínimo 3 caracteres' }}
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Máquina favorita -->
+    <mat-form-field appearance="outline">
+      <mat-label>Máquina que más usas</mat-label>
+      <mat-select name="maquinaFavorita" [(ngModel)]="datos.maquinaFavorita" required>
+        @for (maquina of maquinas; track maquina) {
+          <mat-option [value]="maquina">
+            {{ maquina }}
+          </mat-option>
+        }
+      </mat-select>
+      @if (maquinaForm.controls['maquinaFavorita']?.invalid && maquinaForm.submitted) {
+        <mat-error>
+          Selecciona una máquina
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Fecha último uso -->
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha último uso</mat-label>
+      <input matInput [matDatepicker]="picker" name="fechaUso" 
+             [(ngModel)]="datos.fechaUso" required (dateChange)="validarFecha(datos.fechaUso)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      @if (maquinaForm.controls['fechaUso']?.errors) {
+        <mat-error>
+          {{ maquinaForm.controls['fechaUso']?.errors?.['required'] ? 'Campo requerido' : 'Fecha no válida' }}
+        </mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Frecuencia -->
+    <div class="radio-group">
+      <p>Frecuencia de uso:</p>
+      <mat-radio-group name="frecuencia" [(ngModel)]="datos.frecuencia" required>
+        @for (freq of frecuencias; track freq) {
+          <mat-radio-button [value]="freq">
+            {{ freq }}
+          </mat-radio-button>
+        }
+      </mat-radio-group>
+      @if (!datos.frecuencia && maquinaForm.submitted) {
+        <mat-error style="display: block;">
+          Selecciona una frecuencia
+        </mat-error>
+      }
+    </div>
+
+    <!-- Botón -->
+    <button mat-raised-button color="primary" 
+            [disabled]="maquinaForm.invalid" type="submit">
+      Enviar datos
+    </button>
+  </form>
+</mat-card>

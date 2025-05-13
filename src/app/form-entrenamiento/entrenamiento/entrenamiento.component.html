@@ -1,0 +1,68 @@
+<mat-card class="form-card">
+    <h2>Registro de Entrenamiento</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+     
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre completo</mat-label>
+        <input matInput formControlName="nombre">
+        @if (form.get('nombre')?.invalid){
+          <mat-error>{{ form.get('nombre')?.errors?.['required'] ? 'Campo requerido' : 'Mínimo 3 caracteres' }}</mat-error>
+        }
+      </mat-form-field>
+  
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Tipo de entrenamiento</mat-label>
+        <mat-select formControlName="tipoEntrenamiento">
+          @for (tipo of tiposEntrenamiento; track tipo) {
+            <mat-option [value]="tipo">
+              {{ tipo }}
+            </mat-option>
+          }
+        </mat-select>
+        @if (form.get('tipoEntrenamiento')?.invalid){
+          <mat-error>Selecciona un tipo de entrenamiento</mat-error>
+        }
+      </mat-form-field>
+  
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha del entrenamiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        @if (form.get('fecha')?.errors){
+          <mat-error>{{ form.get('fecha')?.errors?.['required'] ? 'Campo requerido' : 'Fecha no válida' }}</mat-error>
+        }
+      </mat-form-field>
+  
+      
+      <mat-radio-group formControlName="objetivo">
+        <p>Objetivo principal:</p>
+        @for (obj of objetivos; track obj) {
+          <mat-radio-button [value]="obj">
+            {{ obj }}
+          </mat-radio-button>
+        }
+        @if (form.get('objetivo')?.invalid){
+          <mat-error style="display: block;">Selecciona un objetivo</mat-error>
+        }
+      </mat-radio-group>
+  
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Tiempo (minutos)</mat-label>
+        <input matInput type="number" formControlName="tiempo">
+        @if (form.get('tiempo')?.invalid){
+          <mat-error>{{ form.get('tiempo')?.errors?.['required'] ? 'Campo requerido' : 'Mínimo 15 minutos' }}</mat-error>
+        }
+      </mat-form-field>
+  
+    
+      <button mat-raised-button color="accent" 
+              [disabled]="form.invalid" type="submit">
+        Guardar entrenamiento
+      </button>
+    </form>
+  </mat-card>

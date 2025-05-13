@@ -1,0 +1,62 @@
+/* Importar la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Establecer la fuente y colores generales */
+:host {
+  font-family: 'Poppins', sans-serif;
+  color: #333; /* Color gris oscuro para el texto */
+  background-color: #fff; /* Fondo blanco */
+}
+
+/* Estilos para el contenedor de información */
+.contenedor-info {
+  background-color: #f5f5f5; /* Gris claro de fondo */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-info h2 {
+  color: #FFCD00; /* Color amarillo */
+  font-weight: 600; /* Negrita */
+}
+
+.contenedor-info div {
+  color: #333; /* Color gris oscuro para el texto */
+}
+
+.contenedor-info strong {
+  color: #000; /* Color negro para los títulos */
+}
+
+/* Estilos para la sección de redes */
+.seccion-redes h3 {
+  color: #FFCD00; /* Color amarillo */
+  font-weight: 600;
+}
+
+.seccion-redes a {
+  color: #000; /* Color negro para los enlaces */
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.seccion-redes a:hover {
+  color: #FFCD00; /* Cambiar a amarillo al pasar el cursor */
+}
+
+.seccion-redes .d-flex a {
+  font-size: 18px;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.seccion-redes i {
+  margin-right: 8px; /* Espacio entre el ícono y el nombre de la red */
+}
+
+/* Fondo para la sección de redes */
+.seccion-redes {
+  background-color: #333; /* Fondo negro */
+  padding: 20px 0;
+}

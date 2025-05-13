@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos para la barra de navegación */
+.navbar {
+  font-family: 'Poppins', sans-serif; /* Aplica la fuente Poppins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+  border-bottom: 2px solid #343a40; /* Línea sutil debajo de la barra */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400; /* Fuente normal */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  padding: 12px 20px; /* Un poco más de espacio dentro de los enlaces */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ffe602; /* Fondo azul al pasar el ratón */
+  color: white; /* Cambia el texto a blanco */
+  border-radius: 4px; /* Bordes redondeados al pasar el ratón */
+}
+
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: white; /* Cambia el color del ícono del menú */
+}
+
+.navbar-nav .active {
+  border-bottom: 2px solid #ffd000; /* Subraya el enlace activo */
+}
+
+.navbar-dark .bg-dark {
+  background-color: #343a40 !important; /* Color de fondo oscuro */
+}

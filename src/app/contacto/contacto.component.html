@@ -1,0 +1,22 @@
+<!-- Información -->
+<section class="container my-5 contenedor-info">
+  <h2 class="mb-4 text-center">Información de Contacto</h2>
+  <div class="mb-3"><strong>Dirección:</strong> {{ ubicacion.direccion }}</div>
+  <div class="mb-3"><strong>Horario:</strong> {{ ubicacion.horario }}</div>
+  <div class="mb-3"><strong>Teléfono:</strong> {{ ubicacion.telefono }}</div>
+  <div class="mb-3"><strong>Correo:</strong> {{ ubicacion.correo }}</div>
+</section>
+
+<!-- Redes -->
+<section class="seccion-redes">
+  <div class="container text-center">
+    <h3>Síguenos en redes</h3>
+    <div class="d-flex justify-content-center gap-4 mt-3">
+      @for (red of redes; track red.nombre) {
+        <a [href]="red.url" target="_blank" rel="noopener">
+          <i [class]="red.icono"></i> {{ red.nombre }}
+        </a>
+      }
+    </div>
+  </div>
+</section>

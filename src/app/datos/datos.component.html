@@ -1,0 +1,23 @@
+@if (authService.isLoggedIn()){
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Clave</th>
+        <th>Valor</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (key of keys; track key) {
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ localStorageData[key] }}</td>
+          <td>
+            <button (click)="editItem(key)" class="edit-btn">Editar</button>
+            <button (click)="deleteItem(key)" class="delete-btn">Eliminar</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

@@ -1,0 +1,39 @@
+<!-- lista desplegable-->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Nuestras Instalaciones</h2>
+
+  <p class="text-center mb-4">Contamos con modernas instalaciones pensadas para brindarte la mejor experiencia. Explora nuestros espacios y descubre todo lo que tenemos para ti.</p>
+
+  <div class="mb-4">
+    <label for="selector" class="form-label">Selecciona una instalación:</label>
+    <select id="selector" class="form-select" [(ngModel)]="seleccionada">
+      @for (area of areas; track area.nombre) {
+        <option [ngValue]="area">{{ area.nombre }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <img [src]="seleccionada.imagen" [alt]="seleccionada.nombre" class="img-fluid imagen-fija">
+    </div>
+
+    <div class="col-md-7">
+      <h4>{{ seleccionada.nombre }}</h4>
+      <p>{{ seleccionada.descripcion }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- lista -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">Servicios que ofrecemos</h3>
+    <p class="text-center mb-4">En nuestras instalaciones también contamos con una variedad de servicios adicionales para que tu experiencia sea aún más cómoda.</p>
+    <ul class="list-group">
+      @for (servicio of servicios; track servicio) {
+        <li class="list-group-item">{{ servicio }}</li>
+      }
+    </ul>
+  </div>
+</section>

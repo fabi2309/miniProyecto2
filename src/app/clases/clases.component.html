@@ -1,0 +1,62 @@
+<!-- Cardss -->
+<section class="tipos-clases container my-5">
+  <h2 class="text-center mb-4">Nuestras Clases</h2>
+  <p class="text-center mb-4">Ofrecemos una variedad de clases que se adaptan a todos los niveles de condición física. Ya sea que quieras ponerte en forma, relajarte o divertirte, tenemos algo para ti.</p>
+  <div class="row">
+    @for (clase of clases; track clase.nombre) {
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img [src]="clase.imagen" class="card-img-top" [alt]="clase.nombre">
+          <div class="card-body">
+            <h5 class="card-title">{{ clase.nombre }}</h5>
+            <p class="card-text">{{ clase.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Video -->
+<section class="video-container text-center my-5">
+  <h3 class="mb-4">Mira nuestro video</h3>
+  <p class="mb-4">Descubre más sobre nuestras clases y cómo podemos ayudarte a alcanzar tus objetivos. ¡Mira el video y únete a nosotros hoy!</p>
+  <iframe 
+    width="560" 
+    height="315" 
+    [src]="video | domseguro:'https://www.youtube.com/embed/'" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- Tabla -->
+<section class="horarios bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Horarios de Clases</h2>
+    <p class="text-center mb-4">Consulta los horarios de nuestras clases y encuentra el mejor momento para asistir según tu agenda.</p>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Clase</th>
+            <th>Lunes</th>
+            <th>Miércoles</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (horario of horarios; track horario.clase) {
+            <tr>
+              <td>{{ horario.clase }}</td>
+              <td>{{ horario.lunes }}</td>
+              <td>{{ horario.miercoles }}</td>
+              <td>{{ horario.viernes }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

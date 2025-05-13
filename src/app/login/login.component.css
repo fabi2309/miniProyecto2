@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Establecemos la fuente global como Poppins */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.todo{
+    text-align: center;
+    align-items: center;
+}
+
+/* Estilos generales para el formulario */
+.login-form {
+  max-width: 400px; /* Limita el ancho máximo del formulario */
+  margin: 50px auto; /* Centra el formulario vertical y horizontalmente */
+  padding: 30px; /* Espaciado interno */
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+  text-align: center; /* Centra el texto dentro del formulario */
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  color: #343a40; /* Texto gris oscuro */
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%; /* Hace que los inputs ocupen todo el ancho disponible */
+  padding: 12px 20px; /* Espaciado interno */
+  margin-bottom: 15px; /* Espacio entre los campos */
+  border: 2px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente normal */
+  text-align: center; /* Centra el texto dentro de los campos de entrada */
+}
+
+.login-form input:focus {
+  border-color: #f7c600; /* Borde amarillo cuando el input está en foco */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+.login-form button {
+  width: 100%; /* El botón ocupa todo el ancho */
+  padding: 12px 20px; /* Espaciado interno */
+  background-color: #f7c600; /* Fondo amarillo */
+  color: black; /* Texto negro */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.1rem;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.login-form button:hover {
+  background-color: #e5b900; /* Fondo amarillo más oscuro al pasar el ratón */
+}
+
+.error-message {
+  color: red; /* Color rojo para los mensajes de error */
+  text-align: center; /* Centra el mensaje de error */
+  margin-top: 15px;
+  font-size: 1rem; /* Tamaño de fuente adecuado */
+}

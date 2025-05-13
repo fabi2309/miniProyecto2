@@ -1,0 +1,71 @@
+/* Importar la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Establecer la fuente y colores generales */
+:host {
+  font-family: 'Poppins', sans-serif;
+  color: #333; /* Color gris oscuro para el texto */
+  background-color: #fff; /* Fondo blanco */
+}
+
+/* Estilos para el encabezado de la sección de instalaciones */
+h2, h3 {
+  color: #FFCD00; /* Color amarillo */
+  font-weight: 600; /* Negrita */
+}
+
+/* Estilos para el texto de la sección */
+p {
+  color: #333; /* Color gris oscuro para el texto */
+}
+
+/* Estilos para el selector desplegable */
+.form-label {
+  color: #000; /* Negro para las etiquetas */
+  font-weight: 600;
+}
+
+.form-select {
+  border: 1px solid #ccc; /* Gris claro para los bordes */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-select:focus {
+  border-color: #FFCD00; /* Amarillo cuando está seleccionado */
+  outline: none;
+}
+
+/* Estilos para las imágenes */
+.imagen-fija {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+  height: 250px; /* Fija la altura de las imágenes */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la lista de servicios */
+.bg-light {
+  background-color: #f5f5f5; /* Gris claro para el fondo */
+}
+
+.list-group-item {
+  border: 1px solid #ccc; /* Gris claro para los bordes */
+  margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+  background-color: #FFCD00; /* Amarillo al pasar el cursor */
+  color: #000; /* Negro para el texto */
+}
+
+/* Estilos para la sección de servicios */
+.bg-light {
+  padding: 40px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

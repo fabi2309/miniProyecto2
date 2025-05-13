@@ -1,0 +1,26 @@
+<header>
+  <div class="header-content">
+    <!-- Logo a la izquierda -->
+    <img src="./pesa.png" alt="Logo FitZone" class="logo">
+
+    <!-- Título y subtítulo al centro -->
+    <div class="title-container">
+      <h1>FitZone</h1>
+      <p>Activa tu cuerpo, renueva tu mente</p>
+    </div>
+
+    <!-- Botón o nombre del usuario a la derecha -->
+    <div class="button-container">
+      @if (!authService.isLoggedIn()){
+        <button routerLink="/login" routerLinkActive="active">Iniciar sesión</button>
+      }
+
+      @if (authService.isLoggedIn()){
+        <div class="logged-in">
+          Bienvenido, {{ authService.getUser().fullName }}
+          <button (click)="logout()">Cerrar sesión</button>
+        </div>
+      }
+    </div>
+  </div>
+</header>
